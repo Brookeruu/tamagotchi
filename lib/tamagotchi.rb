@@ -1,5 +1,5 @@
 class Tamagotchi
-  @@keychain = []
+  # @@keychain = []
   attr_accessor :food, :activity, :sleep
 
   def initialize(name)
@@ -7,12 +7,11 @@ class Tamagotchi
     @@food = 10
     @@activity = 0
     @@energy = 10
-
   end
-
-  def save
-    @@keychain.push(self)
-  end
+  #
+  # def save
+  #   @@keychain.push(self)
+  # end
 
   def name
     @@name
@@ -35,7 +34,6 @@ class Tamagotchi
     @@energy -= 5
     @@food -= 5
     return "fun"
-    #increase activity, decrease food, decrease energy
   end
 
   def feed
