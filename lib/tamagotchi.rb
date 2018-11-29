@@ -3,10 +3,11 @@ class Tamagotchi
   attr_accessor :food, :activity, :sleep
 
   def initialize(name)
-    @name = name
-    @food = 10
-    @activity = 0
-    @sleepy = 10
+    @@name = name
+    @@food = 10
+    @@activity = 0
+    @@energy = 10
+
   end
 
   def save
@@ -14,23 +15,30 @@ class Tamagotchi
   end
 
   def name
-    @name
+    @@name
   end
 
   def food
-    @food
+    @@food
   end
 
-  def sleepy
-  @sleepy
+  def energy
+  @@energy
   end
 
   def activity
-    @activity
+    @@activity
   end
 
-  def play
+  def fun
+    @@activity += 10
+    @@energy -= 5
+    @@food -= 5
+    return "fun"
+    #increase activity, decrease food, decrease energy
+  end
 
+  def feed
   end
 
 
