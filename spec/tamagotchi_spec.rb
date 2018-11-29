@@ -13,12 +13,21 @@ describe(Tamagotchi) do
     end
   end
 
-  describe(".play") do
+  describe("#fun") do
     it("increase activity level") do
       my_pet = Tamagotchi.new("lil dragon")
       expect(my_pet.fun()).to(eq("fun"))
       expect(my_pet.activity()).to(eq(10))
       expect(my_pet.energy()).to(eq(5))
+    end
+  end
+
+  describe("#feed") do
+    it("increase activity level") do
+      my_pet = Tamagotchi.new("lil dragon")
+      expect(my_pet.feed()).to(eq("nom!"))
+      expect(my_pet.food()).to(eq(25))
+      expect(my_pet.energy()).to(eq(25))
     end
   end
 end

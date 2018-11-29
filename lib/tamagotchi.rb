@@ -39,6 +39,16 @@ class Tamagotchi
   end
 
   def feed
+    @@energy += 15
+    @@food += 15
+    return "nom!"
+  end
+
+  def rest
+    @@energy += 15
+    @@food -= 5
+    @@activity -= 5
+    return "yawn!"
   end
 
 
